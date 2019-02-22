@@ -66,6 +66,7 @@ class TokenObtainPairSerializer(TokenObtainSerializer):
 
         data['refresh'] = text_type(refresh)
         data['access'] = text_type(refresh.access_token)
+        data['user_id'] = text_type(self.user.id)
 
         return data
 
